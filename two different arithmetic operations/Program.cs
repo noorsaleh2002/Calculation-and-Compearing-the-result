@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace two_different_arithmetic_operations
+namespace arithmetic_operations
 {
     
 
@@ -19,15 +19,21 @@ namespace two_different_arithmetic_operations
             if(op== "*") return x * y;
             else  return x / y;
         }
+        static double setnumbers()
+        {
+            double num= Convert.ToDouble(Console.ReadLine());
+            return num;
+
+        }
         static void Main(string[] args)
         {
             double Num1, Num2,Num3,Num4;
             string op;
             Console.Write("Pleasr enter the first number:");
-            Num1=Convert.ToDouble(Console.ReadLine());
+            Num1 = setnumbers();
             //Console.WriteLine();
             Console.Write("Please enter the second numbe:");
-            Num2=Convert.ToDouble(Console.ReadLine());
+            Num2 = setnumbers();
             //Console.WriteLine();
             Console.WriteLine("Please choose the operation from the following (+,-,*,/): * ");
             op=Console.ReadLine();
@@ -43,9 +49,9 @@ namespace two_different_arithmetic_operations
             }
             Console.WriteLine("The result =" + re1);
             Console.Write("Please enter the third number");
-            Num3 = Convert.ToDouble(Console.ReadLine());
+            Num3 = setnumbers();
             Console.Write("Please enter the forth number:");
-            Num4 = Convert.ToDouble(Console.ReadLine());
+            Num4 = setnumbers();
             Console.WriteLine("Please choose the operation from the following (+,-,*,/): * ");
             op = Console.ReadLine();
             re2 = Mycalculatoer(Num3, Num4,op);
